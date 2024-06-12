@@ -3,8 +3,8 @@ import {  createReviewController,  getReviewByIdController,  deleteReviewControl
 import auth from '../middlware/authMiddleware';
 const router = Router();
 
-router.post('bookReview/:bookId/createReview', auth,createReviewController);
-router.get('bookReview/:bookId/getReviewById/:id', getReviewByIdController);
+router.post('/bookReview/:bookId/createReview', auth,createReviewController);
+router.get('/bookReview/:bookId/getReviewById', getReviewByIdController);
 router.delete('/deleteReview/:id',auth, deleteReviewController);
 
 
